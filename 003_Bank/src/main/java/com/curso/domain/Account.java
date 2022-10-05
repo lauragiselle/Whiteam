@@ -4,11 +4,7 @@ public class Account {
 	private double balance;
 
 	public Account(double balance) {
-		if (balance > 0) {
-			this.balance = balance;
-		} else {
-			System.out.println("El ingreso del balance no puede ser 0 o negativo");
-		}
+		this.balance = balance;
 	}
 
 	public double getBalance() {

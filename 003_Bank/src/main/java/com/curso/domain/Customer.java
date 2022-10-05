@@ -6,15 +6,8 @@ public class Customer {
 	private Account account;
 
 	public Customer(String firstName, String lastName) {
-		if (firstName != null) {
-			this.firstName = firstName;			
-		}
-		
-		if (lastName != null) {
-			this.lastName = lastName;			
-		} else {
-			System.err.println("");
-		}
+		this.firstName = firstName;	
+		this.lastName = lastName;
 	}
 
 	public String getFirstName() {
