@@ -1,7 +1,5 @@
 package com.curso.testing;
 
-import java.util.Scanner;
-
 import com.curso.domain.Account;
 import com.curso.domain.Customer;
 
