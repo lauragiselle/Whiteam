@@ -24,8 +24,7 @@ public class CustomersServlet extends HttpServlet {
     	List<Customer> lista = new ArrayList();
     	
     	for (int i = 0; i < Bank.getNumOfCustomers(); i++) {
-    		Customer customer = Bank.getCustomer(i);
-    		 lista.add(customer);
+    		 lista.add(Bank.getCustomer(i));
 		}
 		// añadir el atributo lista con todos los customers a la request
 		request.setAttribute("lista", lista);
