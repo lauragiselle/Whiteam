@@ -1,6 +1,7 @@
 package com.curso.web;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,16 +19,18 @@ public class CustomersServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// recuperar todos los productos
+		// recuperar todos los customers
     	System.out.println("Entro al servlet");
-    	List<Customer> lista = null;
+    	List<Customer> lista = new ArrayList();
+    	
     	for (int i = 0; i < Bank.getNumOfCustomers(); i++) {
-    		 lista.add(Bank.getCustomer(i));
+    		Customer customer = Bank.getCustomer(i);
+    		 lista.add(customer);
 		}
-		// añadir el atributo lista con todos los productos  a la request
+		// añadir el atributo lista con todos los customers a la request
 		request.setAttribute("lista", lista);
 		
-		// despachar la peticion a lista-productos.jsp
+		// despachar la peticion a lista-customers.jsp
 		RequestDispatcher rd = request.getRequestDispatcher("lista-customers.jsp");
 		rd.forward(request, response);
     }
