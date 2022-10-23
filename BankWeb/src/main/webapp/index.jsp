@@ -10,8 +10,8 @@
     <title>Index</title>
   </head>
   <body>
-    <h1>Bank</h1> <br>
+    <h1>Bank</h1><br>
     
-    <a class="btn btn-primary" href="lista-customers.jsp" role="button">Lista Customers</a>
+    <a class="btn btn-primary" href="listaCustomers" role="button">Lista Customers</a>
   </body>
 </html>
