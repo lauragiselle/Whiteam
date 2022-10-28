@@ -23,6 +23,9 @@
 			<tr>
 				<td>${customer.firstName}</td>
 				<td>${customer.lastName}</td>
+				<td>
+				   <a href="comprar?idProducto=${producto.idProducto}">Comprar 1 unidad</a>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>
